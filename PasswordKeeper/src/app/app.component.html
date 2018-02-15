@@ -1,5 +1,13 @@
 <mat-toolbar color="primary">
   Password Keeper
+  <span fxFlex></span>
+
+  <button *ngIf="showSignOut" mat-icon-button [matMenuTriggerFor]="signOutMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu [overlapTrigger]="false" #signOutMenu="matMenu">
+    <button mat-menu-item (click)="signOut()">Sign Out</button>
+  </mat-menu>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
