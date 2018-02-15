@@ -12,6 +12,8 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SigninComponent } from './+signin/signin.component';
+import { MainComponent } from './+main/main.component';
 
 import {
   MatAutocompleteModule,
@@ -67,7 +69,9 @@ export const MaterialModules = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SigninComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
