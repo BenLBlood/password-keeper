@@ -12,4 +12,8 @@ export class SigninComponent implements OnInit {
   ngOnInit() {
   }
 
+  signInWithGoogle(): void {
+    console.log("TODO: Sign in with Google");
+  }
+
 }

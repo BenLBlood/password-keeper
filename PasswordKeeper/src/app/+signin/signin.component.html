@@ -1,3 +1,11 @@
-<p>
-  signin works!
-</p>
+<mat-card>
+  <mat-card-title>
+    <h2>Welcome</h2>
+  </mat-card-title>
+  <mat-card-content fxLayout="column" fxLayoutAlign="none center">
+    <p>Passwords saved to this site use https encryption so saving real passwords here should be perfectly save. However this
+      web app really is just a demo, so perhaps you shouldn't go saving critical personal information here.</p>
+    <button mat-raised-button (click)="signInWithGoogle()">Google Login</button>
+    <p>In order to start saving passwords you first need to sign in. You can use Rose-Hulman credentials.</p>
+  </mat-card-content>
+</mat-card>
