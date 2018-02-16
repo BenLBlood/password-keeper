@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -7,13 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
-  constructor() { }
+  constructor(public afAuth: AngularFireAuth, private router: Router) { }
 
   ngOnInit() {
   }
 
   signInWithGoogle(): void {
-    console.log("TODO: Sign in with Google");
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(() => {
+      this.router.navigate(['/']);
+    });
   }
-
 }
