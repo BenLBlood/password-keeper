@@ -1,3 +1,5 @@
-<p>
-  main works!
-</p>
+<mat-grid-list cols="3">
+  <mat-grid-tile *ngFor="let password of passwordStream | async">
+    <pre>{{password | json}}</pre>
+  </mat-grid-tile>
+</mat-grid-list>
