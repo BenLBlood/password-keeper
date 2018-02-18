@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 import { Password } from '../models/password.model';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
+import { MatDialog } from '@angular/material';
+import { PasswordDialogComponent } from '../password-dialog/password-dialog.component';
 
 @Component({
   selector: 'app-main',
@@ -22,7 +24,8 @@ export class MainComponent implements OnInit, OnDestroy {
 
   constructor(private afAuth: AngularFireAuth, 
     private afs: AngularFirestore,
-    private router: Router) {
+    private router: Router,
+    private dialog: MatDialog) {
   }
   
   ngOnInit(): void {
@@ -55,6 +58,10 @@ export class MainComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.authStateSubscription.unsubscribe();
+  }
+
+  showPasswordDialog(): void {
+    this.dialog.open(PasswordDialogComponent);
   }
 }
 

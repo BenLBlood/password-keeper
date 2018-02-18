@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SigninComponent } from './+signin/signin.component';
 import { MainComponent } from './+main/main.component';
+import { PasswordDialogComponent } from './password-dialog/password-dialog.component';
 
 import {
   MatAutocompleteModule,
@@ -71,7 +72,11 @@ export const MaterialModules = [
   declarations: [
     AppComponent,
     SigninComponent,
-    MainComponent
+    MainComponent,
+    PasswordDialogComponent
+  ],
+  entryComponents: [
+    PasswordDialogComponent
   ],
   imports: [
     BrowserModule,
